@@ -1,0 +1,17 @@
+info:
+  name: Emprunter un livre
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/books/73230480-6538-40fc-b828-a6bccc0c978a/borrow"
+  auth:
+    type: bearer
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NzIwNDQyNTcsImV4cCI6MTc3MjA0Nzg1Nywicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGJpYmxpb3RoZXF1ZS5mciJ9.ezgjSvuBeLcyWrAmiUaZBatrW1OZEle4Q_udP0AGjX60r7SjcyP5tA27QRcjd6xBUQ6iSYWpgjheYvZxIEjTGnUyaT-6JIXw2WUCHzv65IKapcKb-DuFXVWb8f-wIHAcsHrjlMi6qdx9Q75wdZfg5xuzP3R-dIUZNnLQaLbWX6k_jxIRiZc4627cEHWK0qSMmx4hOH3yRwwvKxf0FCYPE_ezzhV73nV_Fh7efF2LTppDOWai6XoQp6PsQQCDx56EwtKOmFroo8CXUcFi8qLzT6_8TFRBpvZBOP3PavLIdtTWJv4ciHNf4P_J8G5vWG8iKyfjhE1yoFZuELtyLsbpFHMRsEQxy3RcB7_oy0LrtHA6YdGlDO5LOtk3yM3ojE_I6aUZq50G1mWpMbpFSIuY7R_cXbMWCTxPw1DwzntS-mGmr39ayydkjI6UkUuwTAck-z-JiB4iT0TrZOWCAsI331hY9IwXsAsSRNrsjcK0tRF67xwHF06xDsrDfLl7A4ApEbDJd1-1ZeQnMykw-PmWdSF-opfO9R0fz3bEzJlPO5fTsHFzwOU2NH9MEHnARRUVD6O_EltGEP29oWF2dyo670_UKm-E8-5GiGGQrE8ywnKUYwy0UNgQCmKgfEr2kC-JJnHu7nwgNWyvXYuqAaMdxAMRT3mVJ8dXxLphXyvcV2M
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

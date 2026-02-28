@@ -1,0 +1,6 @@
+name: Local
+variables:
+  - name: base_url
+    value: http://0.0.0.0:8000
+  - name: token
+    value: ""

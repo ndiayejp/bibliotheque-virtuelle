@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping
+    xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+        name="App\Domain\Book\Entity\Book"
+        table="books">
+        <id name="id" type="string" column="id">
+            <generator strategy="NONE"/>
+        </id>
+
+        <field name="title"            type="string"            column="title"             length="255" nullable="false"/>
+        <field name="author"           type="string"            column="author"            length="255" nullable="false"/>
+        <field name="isbn"             type="string"            column="isbn"              length="13"  nullable="false" unique="true"/>
+        <field name="description"      type="text"              column="description"                    nullable="true"/>
+        <field name="coverUrl"         type="string"            column="cover_url"         length="500" nullable="true"/>
+        <field name="totalCopies"      type="integer"           column="total_copies"                   nullable="false"/>
+        <field name="availableCopies"  type="integer"           column="available_copies"               nullable="false"/>
+        <field name="borrowedByUserId" type="string"            column="borrowed_by_user_id"            nullable="true"/>
+        <field name="borrowedAt"       type="datetime_immutable" column="borrowed_at"                   nullable="true"/>
+        <field name="dueDate"          type="datetime_immutable" column="due_date"                      nullable="true"/>
+        <field name="createdAt"        type="datetime_immutable" column="created_at"                    nullable="false"/>
+        <field name="updatedAt"        type="datetime_immutable" column="updated_at"                    nullable="false"/>
+
+    </entity>
+</doctrine-mapping>

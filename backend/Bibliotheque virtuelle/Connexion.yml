@@ -1,0 +1,29 @@
+info:
+  name: "Connexion "
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "admin@bibliotheque.fr",
+        "password": "admin123"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const token = res.getBody().token;
+        bru.setEnvVar("token", token);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
